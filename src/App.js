@@ -1,5 +1,4 @@
-import MovieCard from "./Moviecard.js";
-
+import MovieList from "./MovieList.js";
 
 
 
@@ -8,8 +7,7 @@ function App() {
     <div className="App">
      <>
      <h1>Movie App</h1>
-     <MovieCard/>
-
+     <MovieList/>
      </>
     </div>
   );
