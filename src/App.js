@@ -1,4 +1,5 @@
 import MovieList from "./MovieList.js";
+import Navbar from "./Navbar.js";
 
 
 
@@ -6,7 +7,8 @@ function App() {
   return (
     <div className="App">
      <>
-     <h1>Movie App</h1>
+
+     <Navbar/>
      <MovieList/>
      </>
     </div>

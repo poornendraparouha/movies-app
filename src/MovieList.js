@@ -8,7 +8,8 @@ class MovieList  extends React.Component {
         super();
         this.state={
             movies : [
-                    {   title: "The Avengers",
+                    {   id: 1,
+                        title: "The Avengers",
                         plot: "Super heros movie",
                         price: 199,
                         rating: 8.9,
@@ -17,7 +18,7 @@ class MovieList  extends React.Component {
                         isIncart: true,
                         poster: "https://m.media-amazon.com/images/I/71niXI3lxlL._SY879_.jpg"
                     },
-                    {
+                    {   id: 2,
                         title: "The Dark Knight",
                         plot: "Batman faces the Joker, who brings chaos to Gotham City.",
                         price: 249,
@@ -27,7 +28,7 @@ class MovieList  extends React.Component {
                         isIncart: true,
                         poster: "https://m.media-amazon.com/images/I/61RxB8tSkrL.jpg"
                     },
-                    {
+                    {   id: 3,
                         title: "Iron Man",
                         plot: "A billionaire industrialist and genius inventor, Tony Stark, is kidnapped and forced to build a devastating weapon.",
                         price: 199,
@@ -37,7 +38,7 @@ class MovieList  extends React.Component {
                         isIncart: true,
                         poster: "https://m.media-amazon.com/images/I/51CDHXxg46L._SX300_SY300_QL70_FMwebp_.jpg"
                     },
-                    {
+                    {   id: 4,
                         title: "Spider-Man: Homecoming",
                         plot: "Peter Parker balances his life as an ordinary high school student in Queens with his superhero alter-ego Spider-Man.",
                         price: 229,
@@ -47,7 +48,7 @@ class MovieList  extends React.Component {
                         isIncart: true,
                         poster: "https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg"
                     },
-                    {
+                    {   id: 5,
                         title: "Black Panther",
                         plot: "T'Challa returns home to the African nation of Wakanda to take his rightful place as king.",
                         price: 299,
@@ -57,7 +58,7 @@ class MovieList  extends React.Component {
                         isIncart: true,
                         poster: "https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg"
                     },
-                    {
+                    {   id: 6,
                         title: "Wonder Woman",
                         plot: "Diana, princess of the Amazons, trained to be an unconquerable warrior.",
                         price: 199,
@@ -83,22 +84,6 @@ class MovieList  extends React.Component {
 
         this.setState({movies: movies})
     }
-   
-
-    // addStars=()=>{
-    //     if(this.state.stars >= 5){
-    //         return;
-    //     }
-    //     // form 1
-    //     this.setState({stars: this.state.stars + 0.5})
-
-    //     // form 2
-    //     // this.setState((prevState)=>{
-    //     //     return {stars: prevState.stars + 0.5}
-    //     // })
-
-    //     // console.log("this.state.stars:", this.state.stars)
-    // }
 
     handleDecStar = (movie) => {
         const {movies} = this.state;
@@ -112,13 +97,7 @@ class MovieList  extends React.Component {
 
         this.setState({movies})
     }
-    // decStar=()=>{
-    //     if(this.state.stars <= 0){
-    //         return;
-    //     }
-    //     this.setState({stars: this.state.stars - 0.5})
-
-    // }
+ 
     handleFav = (movie) => {
         const { movies } = this.state;
 
@@ -128,13 +107,6 @@ class MovieList  extends React.Component {
         this.setState({ movies });
     };
 
-    
-    // handlefav =()=>{
-    //     this.setState({fav: !this.state.fav})
-    // }
-    // handleAddToCart =()=>{
-    //     this.setState({isIncart: !this.state.isIncart})
-    // }
     handleAddToCart = (movie) => {
         const { movies } = this.state;
 
@@ -149,13 +121,13 @@ class MovieList  extends React.Component {
         const {movies} = this.state;
         return(
             <>
-            {movies.map((movie, index)=><MovieCard 
-            key={index} 
+            {movies.map((movie)=><MovieCard 
+            key={movie.id} 
             movies = {movie} 
             addStar= {this.handleIncStar}
             decStar= {this.handleDecStar}
-            handleFav={this.handleFav}
-            handleAddToCart={this.handleAddToCart}/>)}
+            toggleFav={this.handleFav}
+            toggleCart={this.handleAddToCart}/>)}
 
             {/* <MovieCard movies={this.state}/> */}
             </>
