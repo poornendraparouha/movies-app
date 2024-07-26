@@ -67,7 +67,7 @@ class MovieCard extends React.Component {
                             <button className="favourite-btn" onClick={this.handlefav}>Favorite</button>} */}
 
                             <button className= {fav? "unfavourite-btn":"favourite-btn"} onClick={() => toggleFav(movies)}>{movies.fav? "Unfavorite":"Favorite"}</button>
-                            <button className={isIncart? "unfavourite-btn": "cart-btn"} onClick={() => toggleCart(movies)}>{movies.isIncart? "Remove from Cart":"Add to Cart"} </button>
+                            <button className={isIncart? "cart-btn": "unfavourite-btn"} onClick={() => toggleCart(movies)}>{movies.isIncart? "Add to Cart":"Remove from Cart"} </button>
 
                         </div>
 
