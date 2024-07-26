@@ -6,7 +6,7 @@ export const movies= [
         rating: 8.9,
         stars: 0,
         fav: false,
-        isIncart: true,
+        isIncart: false,
         poster: "https://m.media-amazon.com/images/I/71niXI3lxlL._SY879_.jpg"
     },
     {   id: 2,
@@ -16,7 +16,7 @@ export const movies= [
         rating: 9.0,
         stars: 0,
         fav: false,
-        isIncart: true,
+        isIncart: false,
         poster: "https://m.media-amazon.com/images/I/61RxB8tSkrL.jpg"
     },
     {   id: 3,
@@ -26,7 +26,7 @@ export const movies= [
         rating: 8.5,
         stars: 0,
         fav: false,
-        isIncart: true,
+        isIncart: false,
         poster: "https://m.media-amazon.com/images/I/51CDHXxg46L._SX300_SY300_QL70_FMwebp_.jpg"
     },
     {   id: 4,
@@ -36,7 +36,7 @@ export const movies= [
         rating: 7.4,
         stars: 0,
         fav: false,
-        isIncart: true,
+        isIncart: false,
         poster: "https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg"
     },
     {   id: 5,
@@ -46,7 +46,7 @@ export const movies= [
         rating: 7.3,
         stars: 0,
         fav: false,
-        isIncart: true,
+        isIncart: false,
         poster: "https://lumiere-a.akamaihd.net/v1/images/p_blackpanther_19754_4ac13f07.jpeg"
     },
     {   id: 6,
@@ -56,7 +56,7 @@ export const movies= [
         rating: 7.9,
         stars: 0,
         fav: false,
-        isIncart: true,
+        isIncart: false,
         poster: "https://m.media-amazon.com/images/I/717t+mNlLeL._AC_SY879_.jpg"
     } 
 ]  

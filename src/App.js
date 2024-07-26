@@ -51,21 +51,23 @@ handleFav = (movie) => {
 };
 
 handleAddToCart = (movie) => {
-    const { movies } = this.state;
-
+    let { movies, cartCount } = this.state;
     const mid = movies.indexOf(movie);
     movies[mid].isIncart = !movies[mid].isIncart;
-
-    this.setState({ movies });
+    if(movies[mid].isIncart){
+      cartCount = cartCount + 1;
+    }
+    else{cartCount -= 1 }
+    this.setState({ movies, cartCount });
 };
   
 
   render(){
-    const { movies } = this.state;
+    const { movies, cartCount } = this.state;
 
     return(
       <>
-      <Navbar />
+      <Navbar cartCount = {cartCount}/>
       <MovieList movies = {movies}
       addStar= {this.handleIncStar}
       decStar= {this.handleDecStar}
