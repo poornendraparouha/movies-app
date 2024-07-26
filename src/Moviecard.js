@@ -1,7 +1,8 @@
-import React from "react";
+// import React from "react";
 
-class MovieCard extends React.Component {
- 
+// changing  component to functional component
+// class MovieCard extends React.Component {
+ function MovieCard (props){
     // addStars=()=>{
     //     if(this.state.stars >= 5){
     //         return;
@@ -32,10 +33,13 @@ class MovieCard extends React.Component {
     //     this.setState({isIncart: !this.state.isIncart})
     // }
 
-    render(){
-        // console.log(this.props);
-        const {movies, addStar, decStar, toggleFav, toggleCart} = this.props;
-        const {title, plot, price, rating, stars,fav, isIncart, poster} = this.props.movies;
+    // changing  component to functional component
+    // render(){
+        // const {movies, addStar, decStar, toggleFav, toggleCart} = this.props;
+        // const {title, plot, price, rating, stars,fav, isIncart, poster} = this.props.movies;
+
+        const {movies, addStar, decStar, toggleFav, toggleCart} = props;
+        const {title, plot, price, rating, stars,fav, isIncart, poster} = props.movies;
         return(
 
             <div className="main">
@@ -76,7 +80,8 @@ class MovieCard extends React.Component {
                 </div>
             </div>
         )
-    }
+    // }
 }
+
 
 export default MovieCard;

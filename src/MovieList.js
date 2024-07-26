@@ -1,12 +1,13 @@
-import React from "react";
+// import React from "react";
 import MovieCard from "./Moviecard";
 
-class MovieList  extends React.Component {
-
-    render(){
+// changing  component to functional component
+// class MovieList  extends React.Component {
+    function MovieList (props){
+    // render(){
         // const {title, plot, price, rating, stars, fav, isIncart, poster} = this.state.movies;
-        const {movies, addStar, decStar, toggleFav, toggleCart } = this.props;
-        console.log(this.props)
+        // const {movies, addStar, decStar, toggleFav, toggleCart } = this.props;
+        const {movies, addStar, decStar, toggleFav, toggleCart } = props;
         return(
             <>
             {movies.map((movie)=><MovieCard 
@@ -24,7 +25,7 @@ class MovieList  extends React.Component {
 
             // </div>
         )
-    }
+    // }
 }
 
 export default MovieList;

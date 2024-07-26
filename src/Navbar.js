@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import styled from "styled-components";
 
 
@@ -40,22 +40,25 @@ const CartItemCount= styled.div`
     visibility: ${(props)=> props.show? 'visible' : 'hidden'};
 `;
   
-class Navbar extends React.Component{
-    render(){
-        const {cartCount} = this.props
+    // changing  component to functional component
+// class Navbar extends React.Component{
+//     render(){
+    function Navbar (props){
+        // const {cartCount} = this.props
+        const {cartCount} = props;
         return(
             <>
             <Nav>
                 <Title>Codeflix</Title>
                 <CartContainer>
                     <CartIcon src="https://cdn-icons-png.flaticon.com/128/2331/2331970.png" alt="Cart Icon"/>
-                    <CartItemCount color = "yellow" show={true}> {cartCount} </CartItemCount>
+                    <CartItemCount color = "yellow" show= {true}> {cartCount} </CartItemCount>
                 </CartContainer>
             </Nav>
             </>
         )
     }
-}
+// }
 
 
 export default Navbar;
