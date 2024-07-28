@@ -2,10 +2,7 @@ import MovieList from "./MovieList.js";
 import Navbar from "./Navbar.js";
 import React from "react";
 import {movies} from "./MoviesData"
-
-
 import "./index.css"
-
 class App extends React.Component{
   constructor(){
     super();
@@ -13,7 +10,6 @@ class App extends React.Component{
         movies : movies,
         cartCount : 0
     }
-    // this.addStars = this.addStars.bind(this);
 };
 handleIncStar = (movie) => {
     const {movies} = this.state;
@@ -60,8 +56,6 @@ handleAddToCart = (movie) => {
     else{cartCount -= 1 }
     this.setState({ movies, cartCount });
 };
-  
-
   render(){
     const { movies, cartCount } = this.state;
 
@@ -79,17 +73,5 @@ handleAddToCart = (movie) => {
     )
   }
 }
-
-// function App() {
-//   return (
-//     <div className="App">
-//      <>
-
-//      <Navbar/>
-//      <MovieList/>
-//      </>
-//     </div>
-//   );
-// }
 
 export default App;

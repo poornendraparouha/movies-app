@@ -1,8 +1,5 @@
-// import React from "react";
 import styled from "styled-components";
 
-
-// using styled components (css in js)
 const Nav = styled.div`
         // width:100%;
         height:70px; 
@@ -39,12 +36,8 @@ const CartItemCount= styled.div`
     font-size: 12px;
     visibility: ${(props)=> props.show? 'visible' : 'hidden'};
 `;
-  
-    // changing  component to functional component
-// class Navbar extends React.Component{
-//     render(){
+
     function Navbar (props){
-        // const {cartCount} = this.props
         const {cartCount} = props;
         return(
             <>
@@ -58,7 +51,4 @@ const CartItemCount= styled.div`
             </>
         )
     }
-// }
-
-
 export default Navbar;
